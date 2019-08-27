@@ -1,5 +1,3 @@
-export GITHUB_USERNAME='vincecampanale'
-
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
