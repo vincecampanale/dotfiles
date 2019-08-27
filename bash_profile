@@ -38,5 +38,3 @@ if [ -f ~/.bashrc ]; then
 fi
 
 export PATH="$HOME/.cargo/bin:$PATH"
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
