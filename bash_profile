@@ -16,33 +16,23 @@ PS1="\[\e[33m\]  \d \t \w$git_prompt\n\[\e[m\]\$ "
 export GITHUB_USERNAME='vincecampanale'
 
 alias greeting="echo 'hello world'"
-alias gs="git status"
 
-cdls () {
-  cd "$@" && ls;
-}
-
-alias reload='source ~/.bash_profile'       # Reloads the prompt, for new modifications
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias ll='ls -FGlAhp'                       # Super detailed 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 cd() { builtin cd "$@"; ls; }               # Always list directory contents upon 'cd'
-alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
 alias ..='cd ../'                           # Go back 1 directory level
 alias ...='cd ../../'                       # Go back 2 directory levels
 alias .3='cd ../../../'                     # Go back 3 directory levels
 alias .4='cd ../../../../'                  # Go back 4 directory levels
 alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
-alias subl='sublime'                           # edit:         Opens any file in sublime editor
-alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
-alias ~="cd ~"                              # ~:            Go Home
+alias f='open -a Finder ./'                 # f: Opens current dir in MacOS Finder
 alias c='clear'                             # c:            Clear terminal display
-alias which='type -all'                     # which:        Find executables
+# alias which='type -all'                     # which:        Find executables
 alias rm="rm -i"
-alias psh="python -m SimpleHTTPServer"      # psh:  Start an HTTP server at localhost:8000
 
 export PATH="$PATH: `yarn global bin`" # Add yarn command
 
