@@ -3,14 +3,11 @@
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
-
 source $(brew --prefix)/etc/bash_completion
 GIT_PS1_SHOWDIRTYSTATE=1
 git_prompt='$(__git_ps1)'
 
 PS1="\[\e[33m\]  \d \t \w$git_prompt\n\[\e[m\]\$ "
-
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export GITHUB_USERNAME='vincecampanale'
