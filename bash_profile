@@ -7,8 +7,6 @@ PS1="\[\e[33m\]  \d \t \w$git_prompt\n\[\e[m\]\$ "
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 export GITHUB_USERNAME='vincecampanale'
 
-alias greeting="echo 'hello world'"
-
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
@@ -23,7 +21,6 @@ alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
 alias f='open -a Finder ./'                 # f: Opens current dir in MacOS Finder
 alias c='clear'                             # c:            Clear terminal display
-# alias which='type -all'                     # which:        Find executables
 alias rm="rm -i"
 
 export PATH="$PATH: `yarn global bin`" # Add yarn command
