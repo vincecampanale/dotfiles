@@ -1,13 +1,21 @@
-alias cp='cp --interactive --verbose'
-alias mv='mv --interactive --verbose'
-alias rm="rm --interactive"
-alias mkdir='mkdir --parents --verbose'     # Make parent directories as needed
-alias ll='ls -FGlAhp'                       # Super detailed 'ls' implementation
-cd() { builtin cd "$@"; ls; }               # Always list directory contents upon 'cd'
-alias ..='cd ../'                           # Go back 1 directory level
-alias ...='cd ../../'                       # Go back 2 directory levels
-alias f='open -a Finder ./'                 # f: Opens current dir in MacOS Finder
-alias c='clear'                             # c: Clear terminal display
+source $(brew --prefix)/etc/bash_completion
+
+GIT_PS1_SHOWDIRTYSTATE=1
+git_prompt='$(__git_ps1)'
+PS1="\[\e[33m\]  \d \t \w$git_prompt\n\[\e[m\]\$ "
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+if [ -f ~/.config/exercism/exercism_completion.bash ]; then
+  . ~/.config/exercism/exercism_completion.bash
+fi
+
+export PATH="$PATH: `yarn global bin`" # Add yarn command
+export PATH="$HOME/.cargo/bin:$PATH"
 
 if [ -f ~/.bashrc ]; then
     source ~/.bashrc
