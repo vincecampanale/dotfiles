@@ -11,7 +11,6 @@ PS1="\[\e[33m\]  \d \t \w$git_prompt\n\[\e[m\]\$ "
 ########
 
 export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="$PATH: `yarn global bin`" # Add yarn command
 export PATH="$HOME/.cargo/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 
