@@ -1,8 +1,14 @@
-source $(brew --prefix)/etc/bash_completion
+##########
+# Prompt #
+##########
 
 GIT_PS1_SHOWDIRTYSTATE=1
 git_prompt='$(__git_ps1)'
 PS1="\[\e[33m\]  \d \t \w$git_prompt\n\[\e[m\]\$ "
+
+########
+# PATH #
+########
 
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH: `yarn global bin`" # Add yarn command
@@ -15,10 +21,20 @@ export NVM_DIR="$HOME/.nvm"
 # Load nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
+######################
+# Completion plugins #
+######################
+
+source $(brew --prefix)/etc/bash_completion
+
+##########
+# bashrc #
+##########
+
 if [ -f ~/.bashrc ]; then
     source ~/.bashrc
 fi
 
-if [ -f ~/.config/exercism/exercism_completion.bash ]; then
-  . ~/.config/exercism/exercism_completion.bash
+if [ -f ~/.bash_profile.overrides ]; then
+    source ~/.bash_profile.overrides
 fi

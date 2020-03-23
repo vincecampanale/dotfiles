@@ -10,6 +10,7 @@
     ~/.vimrc:
     ~/.bashrc: 'bashrc.sh'
     ~/.bash_profile: 'bash_profile.sh'
+    ~/.bash_profile.overrides: 'bash_profile.overrides.sh'
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

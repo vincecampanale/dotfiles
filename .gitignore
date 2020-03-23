@@ -4,3 +4,5 @@ autoload
 
 \.netrwhist
 *\.swp
+
+*\.overrides\.sh
