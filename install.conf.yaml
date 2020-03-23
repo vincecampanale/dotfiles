@@ -8,7 +8,8 @@
     ~/.dotfiles: ''
     ~/.vim:
     ~/.vimrc:
-    ~/.bashrc:
+    ~/.bashrc: 'bashrc.sh'
+    ~/.bash_profile: 'bash_profile.sh'
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

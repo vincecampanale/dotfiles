@@ -1,3 +1,5 @@
+echo "Running bashrc"
+
 alias cp='cp --interactive --verbose'
 alias mv='mv --interactive --verbose'
 alias rm="rm --interactive"
